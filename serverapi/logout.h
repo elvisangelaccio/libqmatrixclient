@@ -18,13 +18,13 @@
 
 #pragma once
 
-#include "servercallsetup.h"
+#include "callconfig.h"
 
 namespace QMatrixClient
 {
     namespace ServerApi
     {
-        inline CallConfigNoReplyBody Logout()
+        inline VoidReplyCallConfig Logout()
         {
             return { "Logout", HttpVerb::Post, "/logout" };
         }
