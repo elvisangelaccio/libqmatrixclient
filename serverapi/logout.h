@@ -24,9 +24,9 @@ namespace QMatrixClient
 {
     namespace ServerApi
     {
-        inline VoidReplyCallConfig Logout()
+        inline SimpleCallConfig Logout()
         {
-            return { "Logout", HttpVerb::Post, "/logout" };
+            return { "Logout", JobHttpType::PostJob, "/logout" };
         }
     }
 }

@@ -21,7 +21,7 @@
 #include <QtCore/QJsonObject>
 #include <QtCore/QString>
 
-#include "requestconfig.h"
+#include "../jobs/requestconfig.h"
 
 class QNetworkReply;
 
@@ -153,7 +153,7 @@ namespace QMatrixClient
          * analyze the reply from the server, except a plain check for
          * successful completion ('200').
          */
-        class VoidReplyCallConfig : public CallConfig
+        class SimpleCallConfig : public CallConfig
         {
             public:
                 using CallConfig::CallConfig;

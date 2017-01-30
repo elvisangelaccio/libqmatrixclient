@@ -9,6 +9,6 @@ namespace QMatrixClient
 {
     namespace ServerApi
     {
-        VoidReplyCallConfig Logout();
+        SimpleCallConfig Logout();
     }
 }

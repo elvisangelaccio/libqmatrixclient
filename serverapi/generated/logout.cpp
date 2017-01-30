@@ -4,7 +4,7 @@
 
 using namespace QMatrixClient::ServerApi;
 
-VoidReplyCallConfig QMatrixClient::ServerApi::Logout()
+SimpleCallConfig QMatrixClient::ServerApi::Logout()
 {
-    return VoidReplyCallConfig("Logout", HttpVerb::Post, "/logout");
+    return SimpleCallConfig("Logout", JobHttpType::PostJob, "/logout");
 }
