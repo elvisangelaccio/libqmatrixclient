@@ -47,4 +47,4 @@ generated_src = qt5_mod.preprocess(
 qt5gui = dependency('qt5', modules : 'Gui')
 qt5network = dependency('qt5', modules : 'Network')
 
-shared_library('qmatrixclient', src + generated_src, version : '0.0.0', soversion : '0', dependencies : [qt5gui, qt5network])
+static_library('qmatrixclient', src + generated_src, version : '0.0.0', soversion : '0', dependencies : [qt5gui, qt5network])
