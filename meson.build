@@ -44,7 +44,10 @@ generated_src = qt5_mod.preprocess(
     ]
 )
 
+qt5core = dependency('qt5', modules : 'Core')
 qt5gui = dependency('qt5', modules : 'Gui')
 qt5network = dependency('qt5', modules : 'Network')
 
-static_library('qmatrixclient', src + generated_src, version : '0.0.0', soversion : '0', dependencies : [qt5gui, qt5network])
+libqmatrixclient = static_library('qmatrixclient', src + generated_src, version : '0.0.0', soversion : '0', dependencies : [qt5gui, qt5network])
+
+executable('qmc-example', 'examples/qmc-example.cpp', link_with : libqmatrixclient, dependencies : qt5core)
