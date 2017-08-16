@@ -32,7 +32,16 @@ src = [
 ]
 
 generated_src = qt5_mod.preprocess(
-  moc_headers : ['connection.h', 'jobs/basejob.h', 'room.h', 'settings.h', 'user.h']
+    moc_headers : [
+        'connection.h',
+        'events/event.h',
+        'events/roommemberevent.h',
+        'events/roommessageevent.h',
+        'jobs/basejob.h',
+        'room.h',
+        'settings.h',
+        'user.h'
+    ]
 )
 
 qt5gui = dependency('qt5', modules : 'Gui')
